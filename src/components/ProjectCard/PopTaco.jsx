@@ -1,4 +1,5 @@
 import React from "react";
+import "./ProjectCard.css";
 
 const poptacoProject = {
   name: "Poptaco - Taco Stand Discovery App",
@@ -25,10 +26,12 @@ Built with Node.js and Express using EJS templates for server-side rendering and
 };
 
 export default function Poptaco() {
-  const { name, link, description, technologies, role, screenshots } = poptacoProject;
+  const { name, link, description, technologies, role, screenshots } =
+    poptacoProject;
 
   return (
     <div
+      className="projectCard"
       style={{
         border: "1px solid #ddd",
         padding: 20,
@@ -38,7 +41,12 @@ export default function Poptaco() {
       }}
     >
       <h2>
-        <a href={link} target="_blank" rel="noopener noreferrer" style={{ color: "#0070f3", textDecoration: "none" }}>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#0070f3", textDecoration: "none" }}
+        >
           {name}
         </a>
       </h2>
@@ -46,17 +54,15 @@ export default function Poptaco() {
       <p style={{ whiteSpace: "pre-line", marginBottom: 16 }}>{description}</p>
 
       <h4>Technologies:</h4>
-      <ul style={{ marginTop: 0, marginBottom: 16 }}>
-        {technologies.map((tech, i) => (
-          <li key={i}>{tech}</li>
-        ))}
-      </ul>
+      <p>{technologies.join(", ")}</p>
 
       <p>
         <strong>Role:</strong> {role}
       </p>
 
-      <div style={{ display: "flex", gap: 12, marginTop: 16, overflowX: "auto" }}>
+      <div
+        style={{ display: "flex", gap: 12, marginTop: 16, overflowX: "auto" }}
+      >
         {screenshots.map((src, idx) => (
           <img
             key={idx}

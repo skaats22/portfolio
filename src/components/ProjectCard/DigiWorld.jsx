@@ -1,4 +1,5 @@
 import React from "react";
+import "./ProjectCard.css"
 
 const digiworldProject = {
   name: "DigiWorld - Digimon Collecting App",
@@ -26,7 +27,7 @@ export default function DigiWorld() {
   const { name, link, description, technologies, role, screenshots } = digiworldProject;
 
   return (
-    <div
+    <div className="projectCard"
       style={{
         border: "1px solid #ddd",
         padding: 20,
@@ -44,11 +45,7 @@ export default function DigiWorld() {
       <p style={{ whiteSpace: "pre-line", marginBottom: 16 }}>{description}</p>
 
       <h4>Technologies:</h4>
-      <ul style={{ marginTop: 0, marginBottom: 16 }}>
-        {technologies.map((tech, i) => (
-          <li key={i}>{tech}</li>
-        ))}
-      </ul>
+      <p>{technologies.join(", ")}</p>
 
       <p>
         <strong>Role:</strong> {role}

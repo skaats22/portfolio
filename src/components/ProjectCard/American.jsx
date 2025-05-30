@@ -1,4 +1,5 @@
 import React from "react";
+import "./ProjectCard.css";
 
 const americanProject = {
   name: "American Roofing & Waterproofing Website",
@@ -30,10 +31,12 @@ Optimized for mobile and performance, the project gave me experience with authen
 };
 
 export default function American() {
-  const { name, link, description, technologies, role, screenshots } = americanProject;
+  const { name, link, description, technologies, role, screenshots } =
+    americanProject;
 
   return (
     <div
+      className="projectCard"
       style={{
         border: "1px solid #ddd",
         padding: 20,
@@ -43,7 +46,12 @@ export default function American() {
       }}
     >
       <h2>
-        <a href={link} target="_blank" rel="noopener noreferrer" style={{ color: "#0070f3", textDecoration: "none" }}>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#0070f3", textDecoration: "none" }}
+        >
           {name}
         </a>
       </h2>
@@ -51,17 +59,15 @@ export default function American() {
       <p style={{ whiteSpace: "pre-line", marginBottom: 16 }}>{description}</p>
 
       <h4>Technologies:</h4>
-      <ul style={{ marginTop: 0, marginBottom: 16 }}>
-        {technologies.map((tech, i) => (
-          <li key={i}>{tech}</li>
-        ))}
-      </ul>
+      <p>{technologies.join(", ")}</p>
 
       <p>
         <strong>Role:</strong> {role}
       </p>
 
-      <div style={{ display: "flex", gap: 12, marginTop: 16, overflowX: "auto" }}>
+      <div
+        style={{ display: "flex", gap: 12, marginTop: 16, overflowX: "auto" }}
+      >
         {screenshots.map((src, idx) => (
           <img
             key={idx}

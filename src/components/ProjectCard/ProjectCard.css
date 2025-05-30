@@ -1,0 +1,49 @@
+.projectCard {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+}
+
+.projectCard h2 a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.description {
+  white-space: pre-line;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.techList {
+  list-style: disc inside;
+  margin: 0 0 16px;
+  padding: 0;
+  color: #555;
+}
+
+.screenshots {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.screenshots img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  cursor: pointer;
+}

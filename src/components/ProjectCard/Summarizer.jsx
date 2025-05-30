@@ -1,5 +1,6 @@
 import React from "react";
-import soon from "../../assets/soonimage.jpg"
+import soon from "../../assets/soonimage.jpg";
+import "./ProjectCard.css";
 
 const summarizerProject = {
   name: "Sales Meeting Summarizer",
@@ -20,16 +21,16 @@ I'm sharing my learning journey publicly with updates on models, UX, and future 
     "Docker",
   ],
   role: "Designed and built the full-stack app combining sales domain expertise and ML-driven automation.",
-  screenshots: [
-    soon,
-  ],
+  screenshots: [soon],
 };
 
 export default function Summarizer() {
-  const { name, link, description, technologies, role, screenshots } = summarizerProject;
+  const { name, link, description, technologies, role, screenshots } =
+    summarizerProject;
 
   return (
     <div
+      className="projectCard"
       style={{
         border: "1px solid #ddd",
         padding: 20,
@@ -39,7 +40,12 @@ export default function Summarizer() {
       }}
     >
       <h2>
-        <a href={link} target="_blank" rel="noopener noreferrer" style={{ color: "#0070f3", textDecoration: "none" }}>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#0070f3", textDecoration: "none" }}
+        >
           {name}
         </a>
       </h2>
@@ -47,17 +53,15 @@ export default function Summarizer() {
       <p style={{ whiteSpace: "pre-line", marginBottom: 16 }}>{description}</p>
 
       <h4>Technologies:</h4>
-      <ul style={{ marginTop: 0, marginBottom: 16 }}>
-        {technologies.map((tech, i) => (
-          <li key={i}>{tech}</li>
-        ))}
-      </ul>
+      <p>{technologies.join(", ")}</p>
 
       <p>
         <strong>Role:</strong> {role}
       </p>
 
-      <div style={{ display: "flex", gap: 12, marginTop: 16, overflowX: "auto" }}>
+      <div
+        style={{ display: "flex", gap: 12, marginTop: 16, overflowX: "auto" }}
+      >
         {screenshots.map((src, idx) => (
           <img
             key={idx}

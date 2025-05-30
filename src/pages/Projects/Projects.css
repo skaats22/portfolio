@@ -1,0 +1,32 @@
+.body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+.projectCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 32px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .projectCards {
+    grid-template-columns: 1fr; /* stack on small screens */
+  }
+}
