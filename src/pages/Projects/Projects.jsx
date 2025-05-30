@@ -9,18 +9,20 @@ import "./Projects.css";
 
 export default function Projects() {
   return (
-    <div className='body'>
+    <>
       <h1>Projects</h1>
       <p>
         Here are some key projects showcasing my blend of sales experience and
         technical skills.
       </p>
-      <div className="projectCards">
-        <American />
-        <Summarizer />
-        <DigiWorld />
-        <Poptaco />
+      <div className="body">
+        <div className="projectCards">
+          <American />
+          <Summarizer />
+          <DigiWorld />
+          <Poptaco />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

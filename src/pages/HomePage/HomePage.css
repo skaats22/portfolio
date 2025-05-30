@@ -1,0 +1,61 @@
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.biopicContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 72%;
+  gap: 30px;
+}
+
+/* Image styling */
+.biopicContainer img {
+  width: 300px;  /* default width */
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Bio styling */
+.bio {
+  flex: 1;  /* let bio take the rest of the space */
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Responsive: Stack vertically on smaller screens */
+@media (max-width: 1200px) {
+  .biopicContainer {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+  
+  .biopicContainer img {
+    width: 80%;  /* shrink image on smaller screens */
+    max-width: 420px; /* max width limit */
+    margin-bottom: 20px;
+  }
+  
+  .bio {
+    text-align: center;
+  }
+}
+
+/* Optional: further shrink on really small screens */
+@media (max-width: 480px) {
+  .biopicContainer img {
+    width: 100%;
+    max-width: 320px;
+  }
+}
