@@ -6,6 +6,7 @@ import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";
 import Contact from "../Contact/Contact";
 import NavBar from "../../components/NavBar/NavBar";
+import Footer from "../../components/Footer/Footer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer />
     </>
   );
 }

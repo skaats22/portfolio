@@ -31,6 +31,7 @@ h1 {
   color: #333;
   font-size: 1.1rem;
   line-height: 1.5;
+  text-align: left;
 }
 
 /* Responsive: Stack vertically on smaller screens */
