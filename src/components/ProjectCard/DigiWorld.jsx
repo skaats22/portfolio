@@ -1,30 +1,76 @@
+import React from "react";
 
+const digiworldProject = {
+  name: "DigiWorld - Digimon Collecting App",
+  link: "https://digiworld-7531dba8c2f8.herokuapp.com/",
+  description: `DigiWorld is a web app for Digimon enthusiasts to collect, trade, and manage their Digimon collection. The app features a user-friendly interface to browse Digimon, track owned creatures, and engage with other collectors.
 
-// SalesMeetingSummarizerCard.jsx
-export default function SalesMeetingSummarizerCard() {
-  const screenshots = [
-    "https://i.imgur.com/yourimage1.jpg",
-    "https://i.imgur.com/yourimage2.jpg",
-    "https://i.imgur.com/yourimage3.jpg",
-  ];
+Built with React for a fast and responsive frontend, Node.js and Express for the backend API, MongoDB with Mongoose for data persistence, and JWT for user authentication.`,
+  technologies: [
+    "React",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Mongoose",
+    "JWT",
+  ],
+  role: "Designed and developed the full-stack app with features focused on seamless collection management, authentication, and real-time user interaction.",
+  screenshots: [
+    "https://imgur.com/IZAIg0X.jpg",
+    "https://imgur.com/VMCHoT0.jpg",
+    "https://imgur.com/Hd8KfsS.jpg",
+  ],
+};
+
+export default function DigiWorld() {
+  const { name, link, description, technologies, role, screenshots } = digiworldProject;
 
   return (
-    <div style={{ border: "1px solid #ccc", padding: 16, borderRadius: 8, marginBottom: 24 }}>
-      <h2>Sales Meeting Summarizer</h2>
+    <div
+      style={{
+        border: "1px solid #ddd",
+        padding: 20,
+        borderRadius: 8,
+        marginBottom: 30,
+        maxWidth: 600,
+      }}
+    >
+      <h2>
+        <a href={link} target="_blank" rel="noopener noreferrer" style={{ color: "#0070f3", textDecoration: "none" }}>
+          {name}
+        </a>
+      </h2>
+
+      <p style={{ whiteSpace: "pre-line", marginBottom: 16 }}>{description}</p>
+
+      <h4>Technologies:</h4>
+      <ul style={{ marginTop: 0, marginBottom: 16 }}>
+        {technologies.map((tech, i) => (
+          <li key={i}>{tech}</li>
+        ))}
+      </ul>
+
       <p>
-        One of the projects I’m really proud of is a Sales Meeting Summarizer I've been building, which combines my background in sales with my technical skills...
+        <strong>Role:</strong> {role}
       </p>
-      <div style={{ display: "flex", gap: 10 }}>
-        {screenshots.map((src, i) => (
+
+      <div style={{ display: "flex", gap: 12, marginTop: 16, overflowX: "auto" }}>
+        {screenshots.map((src, idx) => (
           <img
-            key={i}
+            key={idx}
             src={src}
-            alt={`Sales Meeting Summarizer screenshot ${i + 1}`}
-            style={{ width: 150, height: 100, objectFit: "cover", borderRadius: 6, cursor: "pointer" }}
+            alt={`DigiWorld screenshot ${idx + 1}`}
+            style={{
+              width: 180,
+              height: 120,
+              objectFit: "cover",
+              borderRadius: 6,
+              cursor: "pointer",
+              flexShrink: 0,
+            }}
           />
         ))}
       </div>
-      {/* Add your repo/demo links below if you want */}
     </div>
   );
 }

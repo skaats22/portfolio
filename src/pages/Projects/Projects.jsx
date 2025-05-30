@@ -1,6 +1,7 @@
 // Projects
 
 import React from "react";
+import American from "../../components/ProjectCard/American";
 
 const projects = [
   {
@@ -89,6 +90,7 @@ export default function Projects() {
         Here are some key projects showcasing my blend of sales experience and
         technical skills.
       </p>
+      <American />
       <ul style={{ listStyleType: "none", padding: 0 }}>
         {projects.map((p, i) => (
           <li
