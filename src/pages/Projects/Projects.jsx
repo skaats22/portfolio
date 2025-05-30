@@ -2,6 +2,9 @@
 
 import React from "react";
 import American from "../../components/ProjectCard/American";
+import DigiWorld from "../../components/ProjectCard/DigiWorld";
+import Poptaco from "../../components/ProjectCard/PopTaco";
+import Summarizer from "../../components/ProjectCard/Summarizer";
 
 const projects = [
   {
@@ -91,38 +94,9 @@ export default function Projects() {
         technical skills.
       </p>
       <American />
-      <ul style={{ listStyleType: "none", padding: 0 }}>
-        {projects.map((p, i) => (
-          <li
-            key={i}
-            style={{
-              marginBottom: "2.5rem",
-              borderBottom: "1px solid #ddd",
-              paddingBottom: "1.5rem",
-            }}
-          >
-            <h2 style={{ marginBottom: "0.5rem" }}>
-              <a
-                href={p.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "#0070f3", textDecoration: "none" }}
-              >
-                {p.name}
-              </a>
-            </h2>
-            <p style={{ whiteSpace: "pre-line", marginBottom: "0.8rem" }}>
-              {p.description}
-            </p>
-            <p style={{ marginBottom: "0.5rem" }}>
-              <strong>Technologies:</strong> {p.technologies.join(", ")}
-            </p>
-            <p>
-              <strong>Role:</strong> {p.role}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <Summarizer />
+      <DigiWorld />
+      <Poptaco />
     </div>
   );
 }

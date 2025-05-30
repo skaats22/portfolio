@@ -1,30 +1,79 @@
+import React from "react";
+import soon from "../../assets/soonimage.jpg"
 
+const summarizerProject = {
+  name: "Sales Meeting Summarizer",
+  link: "https://github.com/skaats22/summarizer",
+  description: `A full-stack app that automates summarizing sales meeting notes and generates professional follow-up emails using large language models (LLMs).
 
-// SalesMeetingSummarizerCard.jsx
-export default function SalesMeetingSummarizerCard() {
-  const screenshots = [
-    "https://i.imgur.com/yourimage1.jpg",
-    "https://i.imgur.com/yourimage2.jpg",
-    "https://i.imgur.com/yourimage3.jpg",
-  ];
+The frontend is built with React and Vite for a fast, modern UI where users paste meeting notes and get summaries and follow-ups with one click.
+
+The backend uses Django REST Framework exposing endpoints for summarization (Hugging Face Transformers) and email generation (Flan-T5). The app is containerized with separate frontend and backend folders for modularity.
+
+I'm sharing my learning journey publicly with updates on models, UX, and future plans like user authentication, meeting history, and prompt tuning.`,
+  technologies: [
+    "React",
+    "Vite",
+    "Django REST Framework",
+    "Hugging Face Transformers",
+    "Flan-T5",
+    "Docker",
+  ],
+  role: "Designed and built the full-stack app combining sales domain expertise and ML-driven automation.",
+  screenshots: [
+    soon,
+  ],
+};
+
+export default function Summarizer() {
+  const { name, link, description, technologies, role, screenshots } = summarizerProject;
 
   return (
-    <div style={{ border: "1px solid #ccc", padding: 16, borderRadius: 8, marginBottom: 24 }}>
-      <h2>Sales Meeting Summarizer</h2>
+    <div
+      style={{
+        border: "1px solid #ddd",
+        padding: 20,
+        borderRadius: 8,
+        marginBottom: 30,
+        maxWidth: 600,
+      }}
+    >
+      <h2>
+        <a href={link} target="_blank" rel="noopener noreferrer" style={{ color: "#0070f3", textDecoration: "none" }}>
+          {name}
+        </a>
+      </h2>
+
+      <p style={{ whiteSpace: "pre-line", marginBottom: 16 }}>{description}</p>
+
+      <h4>Technologies:</h4>
+      <ul style={{ marginTop: 0, marginBottom: 16 }}>
+        {technologies.map((tech, i) => (
+          <li key={i}>{tech}</li>
+        ))}
+      </ul>
+
       <p>
-        One of the projects I’m really proud of is a Sales Meeting Summarizer I've been building, which combines my background in sales with my technical skills...
+        <strong>Role:</strong> {role}
       </p>
-      <div style={{ display: "flex", gap: 10 }}>
-        {screenshots.map((src, i) => (
+
+      <div style={{ display: "flex", gap: 12, marginTop: 16, overflowX: "auto" }}>
+        {screenshots.map((src, idx) => (
           <img
-            key={i}
+            key={idx}
             src={src}
-            alt={`Sales Meeting Summarizer screenshot ${i + 1}`}
-            style={{ width: 150, height: 100, objectFit: "cover", borderRadius: 6, cursor: "pointer" }}
+            alt={`${name} screenshot ${idx + 1}`}
+            style={{
+              width: 180,
+              height: 120,
+              objectFit: "cover",
+              borderRadius: 6,
+              cursor: "pointer",
+              flexShrink: 0,
+            }}
           />
         ))}
       </div>
-      {/* Add your repo/demo links below if you want */}
     </div>
   );
 }
