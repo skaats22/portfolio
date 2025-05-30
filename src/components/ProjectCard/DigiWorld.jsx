@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProjectCard.css"
+import "./ProjectCard.css";
 
 const digiworldProject = {
   name: "DigiWorld - Digimon Collecting App",
@@ -7,14 +7,7 @@ const digiworldProject = {
   description: `DigiWorld is a web app for Digimon enthusiasts to collect, trade, and manage their Digimon collection. The app features a user-friendly interface to browse Digimon, track owned creatures, and engage with other collectors.
 
 Built with React for a fast and responsive frontend, Node.js and Express for the backend API, MongoDB with Mongoose for data persistence, and JWT for user authentication.`,
-  technologies: [
-    "React",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "Mongoose",
-    "JWT",
-  ],
+  technologies: ["React", "Node.js", "Express", "MongoDB", "Mongoose", "JWT"],
   role: "Designed and developed the full-stack app with features focused on seamless collection management, authentication, and real-time user interaction.",
   screenshots: [
     "https://imgur.com/IZAIg0X.jpg",
@@ -24,20 +17,26 @@ Built with React for a fast and responsive frontend, Node.js and Express for the
 };
 
 export default function DigiWorld() {
-  const { name, link, description, technologies, role, screenshots } = digiworldProject;
+  const { name, link, description, technologies, role, screenshots } =
+    digiworldProject;
 
   return (
-    <div className="projectCard"
+    <div
+      className="projectCard"
       style={{
         border: "1px solid #ddd",
         padding: 20,
         borderRadius: 8,
         marginBottom: 30,
-        maxWidth: 600,
       }}
     >
       <h2>
-        <a href={link} target="_blank" rel="noopener noreferrer" style={{ color: "#0070f3", textDecoration: "none" }}>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#0070f3", textDecoration: "none" }}
+        >
           {name}
         </a>
       </h2>
@@ -51,7 +50,7 @@ export default function DigiWorld() {
         <strong>Role:</strong> {role}
       </p>
 
-      <div style={{ display: "flex", gap: 12, marginTop: 16, overflowX: "auto" }}>
+      <div className="imgContainer">
         {screenshots.map((src, idx) => (
           <img
             key={idx}

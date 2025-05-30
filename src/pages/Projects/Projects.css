@@ -1,7 +1,7 @@
 .body {
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 0px 1px;
   text-align: center;
 }
 
@@ -18,15 +18,23 @@ p {
 
 .projectCards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 32px;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* two equal flexible columns */
+  gap: 40px; /* adjust gap to match top/bottom padding */
   justify-items: center;
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
+  padding: 0 20px; /* some horizontal padding */
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .projectCards {
     grid-template-columns: 1fr; /* stack on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .projectCards {
+    padding: 0 10px; /* even smaller padding for tiny phones */
+    width: 95%;
   }
 }

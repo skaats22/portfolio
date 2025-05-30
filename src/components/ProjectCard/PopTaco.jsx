@@ -37,7 +37,6 @@ export default function Poptaco() {
         padding: 20,
         borderRadius: 8,
         marginBottom: 30,
-        maxWidth: 600,
       }}
     >
       <h2>
@@ -60,9 +59,7 @@ export default function Poptaco() {
         <strong>Role:</strong> {role}
       </p>
 
-      <div
-        style={{ display: "flex", gap: 12, marginTop: 16, overflowX: "auto" }}
-      >
+      <div className="imgContainer">
         {screenshots.map((src, idx) => (
           <img
             key={idx}
