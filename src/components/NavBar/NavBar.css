@@ -1,0 +1,7 @@
+.navbarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 24px;
+}

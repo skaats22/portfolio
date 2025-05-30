@@ -7,19 +7,19 @@
 
 h1 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  margin: 20px 0 15px 0px;
 }
 
 p {
   font-size: 1.1rem;
-  margin-bottom: 40px;
   color: #666;
+  margin: 10px 0 30px 0px;
 }
 
 .projectCards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr)); /* two equal flexible columns */
-  gap: 40px; /* adjust gap to match top/bottom padding */
+  gap: 5px; /* adjust gap to match top/bottom padding */
   justify-items: center;
   max-width: 1800px;
   margin: 0 auto;
