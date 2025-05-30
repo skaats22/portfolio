@@ -25,7 +25,7 @@ p {
   margin: 0 auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
   .projectCards {
     grid-template-columns: 1fr; /* stack on small screens */
   }
