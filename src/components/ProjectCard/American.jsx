@@ -3,7 +3,7 @@ import "./ProjectCard.css";
 
 const americanProject = {
   name: "American Roofing & Waterproofing Website",
-  link: "https://american-roofing.herokuapp.com",
+  link: "https://github.com/skaats22/american-roofing",
   description: `A full-stack website designed as a lead generation engine, customer review hub, and portfolio for a roofing business. The site allows photo uploads, customer reviews, and admin management.
 
 Built with React + Vite frontend, Tailwind CSS styling, MongoDB + Mongoose backend, Node.js + Express API, AWS S3 for photo storage, EmailJS for notifications, and JWT-based authentication.

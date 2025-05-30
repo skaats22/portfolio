@@ -3,7 +3,7 @@ import "./ProjectCard.css";
 
 const digiworldProject = {
   name: "DigiWorld - Digimon Collecting App",
-  link: "https://digiworld-7531dba8c2f8.herokuapp.com/",
+  link: "https://github.com/skaats22/digiworld",
   description: `DigiWorld is a web app for Digimon enthusiasts to collect, trade, and manage their Digimon collection. The app features a user-friendly interface to browse Digimon, track owned creatures, and engage with other collectors.
 
 Built with React for a fast and responsive frontend, Node.js and Express for the backend API, MongoDB with Mongoose for data persistence, and JWT for user authentication.`,

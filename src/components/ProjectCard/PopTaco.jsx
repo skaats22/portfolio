@@ -3,7 +3,7 @@ import "./ProjectCard.css";
 
 const poptacoProject = {
   name: "Poptaco - Taco Stand Discovery App",
-  link: "https://poptaco-77761f1153d9.herokuapp.com/",
+  link: "https://github.com/skaats22/poptaco",
   description: `Poptaco is a full-stack web app for discovering, reviewing, and managing taco stands. It features user authentication, CRUD operations, and a responsive UI.
 
 Built with Node.js and Express using EJS templates for server-side rendering and SEO-friendly URLs. MongoDB and Mongoose are used for data models including TacoStand, Review, and User. The UI employs CSS with Flexbox and Grid for a responsive layout.`,
