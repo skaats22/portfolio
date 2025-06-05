@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <>
       <h1>Contact</h1>
-      <h3>
+      <h3 className="tagline">
         Feel free to reach out for collaboration, questions, or just want to say
         hi!
       </h3>
