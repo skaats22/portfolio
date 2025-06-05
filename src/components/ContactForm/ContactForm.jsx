@@ -10,11 +10,24 @@ export default function ContactForm() {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const formData = new FormData(e.target);
+    let name = formData.get("name") || "";
+    const email = formData.get("email") || "";
+    const message = formData.get("message") || "";
+
+    const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
+
+    const templateParams = {
+      name: capitalizedName,
+      email,
+      message,
+    };
+
     emailjs
-      .sendForm(
+      .send(
         "service_veo5xei",
         "template_74kzeli",
-        form.current,
+        templateParams,
         "670bWeAta9lFOvq2F"
       )
       .then(
@@ -34,12 +47,12 @@ export default function ContactForm() {
     <form ref={form} onSubmit={sendEmail}>
       <label>
         Name:
-        <input type="text" name="user_name" required />
+        <input type="text" name="name" required />
       </label>
       <br />
       <label>
         Email:
-        <input type="email" name="user_email" required />
+        <input type="email" name="email" required />
       </label>
       <br />
       <label>
@@ -52,5 +65,3 @@ export default function ContactForm() {
     </form>
   );
 }
-
-
