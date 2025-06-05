@@ -19,11 +19,13 @@
 }
 
 .pageTitle {
-  display: none; /* hide by default */
-  font-weight: bold;
-  font-size: 22px;
+  display: none;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 50px; /* Leave space for hamburger */
   user-select: none;
-  color: black; /* Optional */
+  white-space: nowrap;
+  color: black;
 }
 
 .navLinks a {
@@ -121,14 +123,13 @@
     padding: 10px 0;
   }
 
-   .pageTitle {
+  .pageTitle {
     display: block;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    white-space: nowrap;
-    pointer-events: none; /* avoid accidental clicks */
+    margin-left: 0;
   }
 
   /* Ensure navbar has padding left so hamburger doesn't overlap title */

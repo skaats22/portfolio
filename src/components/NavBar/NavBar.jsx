@@ -1,10 +1,28 @@
-// NavBar
-import { NavLink } from "react-router";
+//NavBar
+
+import { NavLink, useLocation } from "react-router";
 import { useState } from "react";
 import "./NavBar.css";
 
-export default function NavBar({ pageTitle = "My Page" }) {
+const getPageTitle = (pathname) => {
+  switch (pathname) {
+    case "/":
+      return "Home";
+    case "/projects":
+      return "Projects";
+    case "/skills":
+      return "Skills";
+    case "/contact":
+      return "Contact";
+    default:
+      return ""; // Or “Page not found” or empty
+  }
+};
+
+export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const pageTitle = getPageTitle(location.pathname);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -20,17 +38,16 @@ export default function NavBar({ pageTitle = "My Page" }) {
         <span className="bar bottom"></span>
       </button>
 
-      {/* Page title centered next to hamburger on small screens */}
       <div className="pageTitle">{pageTitle}</div>
 
       <div className={`navLinks ${isOpen ? "open" : ""}`}>
-        <NavLink to="/" onClick={() => setIsOpen(false)}>🏠 Home </NavLink>
+        <NavLink to="/" onClick={() => setIsOpen(false)}>🏠 Home</NavLink>
         <span className="separator"> | </span>
-        <NavLink to="/projects" onClick={() => setIsOpen(false)}>🚀 Projects </NavLink>
+        <NavLink to="/projects" onClick={() => setIsOpen(false)}>🚀 Projects</NavLink>
         <span className="separator"> | </span>
-        <NavLink to="/skills" onClick={() => setIsOpen(false)}>🧠 Skills </NavLink>
+        <NavLink to="/skills" onClick={() => setIsOpen(false)}>🧠 Skills</NavLink>
         <span className="separator"> | </span>
-        <NavLink to="/contact" onClick={() => setIsOpen(false)}>📞 Contact </NavLink>
+        <NavLink to="/contact" onClick={() => setIsOpen(false)}>📞 Contact</NavLink>
       </div>
     </nav>
   );
