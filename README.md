@@ -1,4 +1,4 @@
-# Developer Portfolio
+# Steve Kaats Portfolio
 
 A mobile-optimized personal portfolio built with **React** and **Node.js**, designed to highlight projects, showcase skills, and provide an easy way to connect.
 
@@ -15,4 +15,4 @@ A mobile-optimized personal portfolio built with **React** and **Node.js**, desi
 - **Frontend**: React, CSS
 - **Backend**: Node.js
 - **Email Service**: EmailJS
-- **Deployment**: (Planned) Heroku
+- **Deployment**: [Check it out here!](https://portfolio-91xrkgu6x-steve-kaats-projects.vercel.app/)
