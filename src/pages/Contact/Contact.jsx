@@ -13,7 +13,6 @@ export default function Contact() {
         hi!
       </h3>
       <div className="contactContainer">
-        <ContactForm />
         <div>
           <a
             href="https://linkedin.com/in/stevekaats"
@@ -23,6 +22,7 @@ export default function Contact() {
             <img src={linkedin} alt="li logo" style={{ height: "32px" }} />
           </a>
         </div>
+        <ContactForm />
       </div>
     </>
   );
