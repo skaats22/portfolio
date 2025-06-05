@@ -1,11 +1,9 @@
-// Contact Form
-
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
   const form = useRef();
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState({ message: "", type: "" });
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -33,35 +31,55 @@ export default function ContactForm() {
       .then(
         (result) => {
           console.log(result.text);
-          setStatus("Message sent successfully!");
+          setStatus({ message: "Message sent successfully!", type: "success" });
           form.current.reset();
         },
         (error) => {
           console.log(error.text);
-          setStatus("Failed to send message. Try again later.");
+          setStatus({
+            message: "Failed to send message. Try again later.",
+            type: "error",
+          });
         }
       );
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <label>
-        Name:
-        <input type="text" name="name" required />
-      </label>
-      <br />
-      <label>
-        Email:
-        <input type="email" name="email" required />
-      </label>
-      <br />
-      <label>
-        Message:
-        <textarea name="message" required />
-      </label>
-      <br />
-      <button type="submit">Send</button>
-      <p>{status}</p>
-    </form>
+    <div>
+      {status.message && (
+        <p
+          className="status"
+          style={{
+            color: status.type === "success" ? "green" : "red",
+            fontWeight: "bold",
+            padding: "5px",
+            width: "75%",
+            margin: "0 auto 20px auto",
+            borderRadius: "16px",
+            backgroundColor: status.type === "success" ? "lightgreen" : "rgb(248, 168, 168)",
+          }}
+        >
+          {status.message}
+        </p>
+      )}
+      <form ref={form} onSubmit={sendEmail}>
+        <label>
+          Name:
+          <input type="text" name="name" required />
+        </label>
+        <br />
+        <label>
+          Email:
+          <input type="email" name="email" required />
+        </label>
+        <br />
+        <label>
+          Message:
+          <textarea name="message" required />
+        </label>
+        <br />
+        <button type="submit">Send</button>
+      </form>
+    </div>
   );
 }

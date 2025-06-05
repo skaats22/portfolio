@@ -34,7 +34,7 @@ h3 {
 /* Bio styling */
 .bio {
   flex: 1;  /* let bio take the rest of the space */
-  color: #333;
+  color: black;
   font-size: 1.1rem;
   line-height: 1.5;
   text-align: left;

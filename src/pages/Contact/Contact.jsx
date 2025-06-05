@@ -12,6 +12,7 @@ export default function Contact() {
         Feel free to reach out for collaboration, questions, or just want to say
         hi!
       </h3>
+      <p>Connect with me:</p>
       <div className="logo">
         <a
           href="https://linkedin.com/in/stevekaats"
