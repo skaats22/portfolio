@@ -5,8 +5,10 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <>
-    <p>This is my footer</p>
-    </>
-  )
+    <div className="footer">
+      <p className="copy">&copy; 2025 Steve Kaats</p>
+      <p>This is my footer</p>
+      <p>🌯</p>
+    </div>
+  );
 }
