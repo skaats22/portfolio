@@ -1,12 +1,18 @@
-# React + Vite
+# Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A mobile-optimized personal portfolio built with **React** and **Node.js**, designed to highlight projects, showcase skills, and provide an easy way to connect.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design** – Optimized for mobile, tablet, and desktop.
+- **Home Page** – Brief introduction and "About Me" section.
+- **Projects Page** – Displays all personal and professional coding projects.
+- **Skills Page** – Lists hard skills (e.g., JavaScript, React) and soft skills (e.g., communication, teamwork).
+- **Contact Page** – Includes a functional contact form that sends emails via [EmailJS](https://www.emailjs.com/).
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React, CSS
+- **Backend**: Node.js
+- **Email Service**: EmailJS
+- **Deployment**: (Planned) Heroku
