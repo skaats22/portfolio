@@ -1,0 +1,29 @@
+.navbarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 24px;
+  background-color: white; /* Optional: ensure it doesn't blend into content */
+  z-index: 1000; /* Ensures it stays above other content */
+  padding: 10px 0; /* Optional: gives some space vertically */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+.navbarContainer a {
+  text-decoration: none;
+  color: inherit; /* Or set a specific color like #000 */
+}
+
+.navbarContainer a:visited {
+  color: inherit; /* Prevents purple color on visited links */
+}
+
+.separator {
+  margin: 0 8px;
+  color: #ccc;
+}

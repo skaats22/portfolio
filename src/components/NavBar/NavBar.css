@@ -3,27 +3,136 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 50px;             /* fixed height for navbar */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;      /* vertically center content */
   gap: 5px;
   font-size: 24px;
-  background-color: white; /* Optional: ensure it doesn't blend into content */
-  z-index: 1000; /* Ensures it stays above other content */
-  padding: 10px 0; /* Optional: gives some space vertically */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  background-color: white;
+  z-index: 1000;
+  padding: 0 50px;          /* add left & right padding, leave space for hamburger */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  /* make navbar a positioning context for absolute children */
+  position: fixed;
 }
 
-.navbarContainer a {
+.pageTitle {
+  display: none; /* hide by default */
+  font-weight: bold;
+  font-size: 22px;
+  user-select: none;
+  color: black; /* Optional */
+}
+
+.navLinks a {
+  color: black;           /* or your preferred color */
+  text-decoration: none;  /* no underline */
+}
+
+.navLinks a:visited {
+  color: black;
   text-decoration: none;
-  color: inherit; /* Or set a specific color like #000 */
 }
 
-.navbarContainer a:visited {
-  color: inherit; /* Prevents purple color on visited links */
+.navLinks a:hover,
+.navLinks a:focus,
+.navLinks a:active {
+  color: black;
+  text-decoration: none;
 }
 
-.separator {
-  margin: 0 8px;
-  color: #ccc;
+
+/* Hamburger button inside navbar */
+.hamburger {
+  display: none;
+  position: absolute;       /* position relative to navbar */
+  left: 10px;
+  top: 50%;                 /* vertically center */
+  transform: translateY(-50%);
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+}
+
+/* Bars inside hamburger */
+.bar {
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Hamburger open animation */
+.hamburger.open .top {
+  transform: translateY(9.5px) rotate(45deg);
+}
+
+.hamburger.open .middle {
+  opacity: 0;
+}
+
+.hamburger.open .bottom {
+  transform: translateY(-9.5px) rotate(-45deg);
+}
+
+/* Responsive: show hamburger and hide links */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    align-items: left;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 1000;
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .navLinks.open a {
+    font-size: 24px; /* bigger font when menu is open */
+  }
+
+  .navLinks > .separator {
+    display: none;
+  }
+
+  .navLinks a {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+   .pageTitle {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none; /* avoid accidental clicks */
+  }
+
+  /* Ensure navbar has padding left so hamburger doesn't overlap title */
+  .navbarContainer {
+    padding-left: 50px;
+  }
 }
