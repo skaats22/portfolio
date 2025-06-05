@@ -7,7 +7,8 @@ import "./HomePage.css";
 export default function HomePage() {
   return (
     <>
-      <h1>Portfolio of Steve Kaats: From Sales to Tech</h1>
+      <h1>Portfolio of Steve Kaats</h1>
+      <h3>Leveraging Technology to Solve Business Problems</h3>
       <div className="body">
         <div className="biopicContainer">
           <img src={profPic} alt="profile picture" />

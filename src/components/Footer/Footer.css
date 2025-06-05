@@ -1,15 +1,25 @@
 .footer {
   display: flex;
-  text-align: center;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   width: 100%;
-  bottom: 0;
-  left: 0;
   text-align: center;
   background-color: rgb(249, 131, 249);
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .footer > p {
   margin: 10px;
+  color: black;
+}
+
+/* Center item absolutely positioned */
+.footer p:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap; /* Prevents text wrapping */
 }
