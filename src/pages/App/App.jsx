@@ -11,22 +11,26 @@ import Footer from "../../components/Footer/Footer";
 function App() {
   return (
     <>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route
-          path="*"
-          element={
-            <h2 style={{ textAlign: "center", fontSize: "2rem" }}>
-              Whoops, nothing here!
-            </h2>
-          }
-        />
-      </Routes>
-      <Footer />
+      <div className="appContainer">
+        <NavBar />
+        <div className="pageContent">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route
+              path="*"
+              element={
+                <h2 style={{ textAlign: "center", fontSize: "2rem" }}>
+                  Whoops, nothing here!
+                </h2>
+              }
+            />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
     </>
   );
 }

@@ -1,0 +1,18 @@
+/* App.css or global layout styles */
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.pageContent {
+  flex: 1; /* Pushes footer to bottom */
+  padding-top: 50px; /* for navbar */
+  padding-bottom: 50px; /* for navbar */
+}
