@@ -9,7 +9,7 @@ export default function Footer() {
     <div className="footer">
       <p className="copy">&copy; 2025 Steve Kaats</p>
       <p>😃</p>
-      <p className= "logo">
+      <p className="logo">
         <a
           href="https://linkedin.com/in/stevekaats"
           target="_blank"
