@@ -1,80 +1,53 @@
-// Skills
-
+// Skills.jsx
 import "./Skills.css";
 import uscLogo from "../../assets/usc-logo.png";
 import galogo from "../../assets/galogo.webp";
 import stanfordlogo from "../../assets/stanfordlogo.jpg";
+import Timeline from "../../components/Timeline/Timeline";
+import { FaPython, FaReact, FaDatabase, FaNodeJs, FaJs } from "react-icons/fa";
 
 export default function Skills() {
   return (
-    <>
-      <h1>Skills & Education</h1>
-      <div className="skillsContainer">
-        <div className="hard">
+    <div className="skillsSection">
+      <h1 className="sectionTitle">Skills & Education</h1>
+
+      <div className="skillsWrapper">
+        <div className="skillsColumn">
+          <h3>Technical Skills</h3>
+          <ul>
+            <li><FaJs /> JavaScript</li>
+            <li><FaPython /> Python</li>
+            <li><FaReact /> React, Django Templates</li>
+            <li><FaNodeJs /> Django, Node.js, Express.js</li>
+            <li><FaDatabase /> PostgreSQL, MongoDB</li>
+            <li>Tools: Git, GitHub, Vite, RESTful APIs, OAuth</li>
+            <li>Machine Learning: Regression, Neural Nets, Decision Trees, Model Evaluation</li>
+          </ul>
+        </div>
+
+        <div className="educationColumn">
+          <h3>Education & Certifications</h3>
           <ul>
             <li>
-              <b>Programming Languages</b>: JavaScript, Python
+              <strong>B.A. Neuroscience,</strong>USC
+              <img src={uscLogo} alt="USC" className="edu-logo" />
             </li>
             <li>
-              <b>Frontend</b>: React, Django Templates (server-rendered
-              HTML/CSS/JS), HTML5, CSS3
+              <strong>Software Engineering Immersive,</strong>General Assembly
+              <img src={galogo} alt="GA" className="edu-logo" />
             </li>
             <li>
-              <b>Backend</b>: Django, Node.js, Express.js
-            </li>
-            <li>
-              <b>Databases</b>: PostgreSQL, MongoDB
-            </li>
-            <li>
-              <b>Tools & Technologies</b>: Git, GitHub, Vite, RESTful APIs,
-              OAuth
-            </li>
-            <li>
-              <b>Machine Learning</b>: Supervised and unsupervised learning,
-              linear/logistic regression, neural networks, decision trees, and
-              model evaluation techniques
-            </li>
-            <br />
-            <li>
-              <b>Education:</b>
-              <ul>
-                <li>
-                  B.A. in Neuroscience, University of Southern California{" "}
-                  <img
-                    src={uscLogo}
-                    alt="USC logo"
-                    style={{ height: "28px" }}
-                  />
-                </li>
-                <li>
-                  Software Engineering Immersive, General Assembly (12-weeks,
-                  Full-Time){" "}
-                  <img src={galogo} alt="GA logo" style={{ height: "28px" }} />
-                </li>
-                <li>
-                  Machine Learning Specialization, Stanford Online (100 hours){" "}
-                  <img
-                    src={stanfordlogo}
-                    alt="GA logo"
-                    style={{ height: "28px" }}
-                  />
-                </li>
-              </ul>
+              <strong>Machine Learning Specialization,</strong>Stanford Online
+              <img src={stanfordlogo} alt="Stanford" className="edu-logo" />
             </li>
           </ul>
         </div>
-        {/* <div className="soft">
-          <h3>Soft Skills</h3>
-          <ul>
-            <li>Enterprise Sales & Account Management</li>
-            <li>Client Relationship Building</li>
-            <li>Strategic Business Development</li>
-            <li>Cross-functional Collaboration</li>
-            <li>Consultative & Challenger Sales Approaches</li>
-            <li>Translating Business Needs into Technical Solutions</li>
-          </ul>
-        </div> */}
       </div>
-    </>
+
+      <div className="timelineWrapper">
+        <h2 className="sectionSubtitle">Career & Learning Timeline</h2>
+        <Timeline />
+      </div>
+    </div>
   );
 }
