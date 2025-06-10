@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <div className="footer">
       <p className="copy">&copy; 2025 Steve Kaats</p>
-      <p>This is my footer</p>
+      <p>😃</p>
       <p className= "logo">
         <a
           href="https://linkedin.com/in/stevekaats"
