@@ -5,7 +5,6 @@ import HomePage from "../HomePage/HomePage";
 import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";
 import Contact from "../Contact/Contact";
-import Career from "../Career/Career";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 
@@ -20,7 +19,6 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/career" element={<Career />} />
             <Route
               path="*"
               element={

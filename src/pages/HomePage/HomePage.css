@@ -67,3 +67,13 @@ h3 {
     max-width: 250px;
   }
 }
+
+.timelineWrapper {
+  margin-top: 2rem;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
