@@ -43,11 +43,6 @@ export default function Skills() {
           </ul>
         </div>
       </div>
-
-      <div className="timelineWrapper">
-        <h2 className="sectionSubtitle">Career & Learning Timeline</h2>
-        <Timeline />
-      </div>
     </div>
   );
 }

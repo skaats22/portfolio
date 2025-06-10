@@ -1,18 +1,16 @@
-/* Override background & text color globally */
-.vertical-timeline-element-content {
-  background: #ffffff !important;
-  color: #222 !important;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
+.timeline-subtitle {
+  text-align: center;
+  margin: 8px 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-/* Customize arrow color */
-.vertical-timeline-element-content::before {
-  border-right: 7px solid #ffffff !important;
-}
-
-/* Customize date text */
-.vertical-timeline-element-date {
-  color: #555;
-  font-weight: bold;
+.timeline-logo {
+  height: 24px;
+  width: auto;
+  margin-left: 6px;
+  border-radius: 4px;
 }

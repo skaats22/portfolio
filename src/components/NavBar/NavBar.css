@@ -41,7 +41,7 @@
 .navLinks a:hover,
 .navLinks a:focus,
 .navLinks a:active {
-  color: black;
+  color: rgb(238, 153, 88);
   text-decoration: none;
 }
 

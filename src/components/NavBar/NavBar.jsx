@@ -47,6 +47,8 @@ export default function NavBar() {
         <span className="separator"> | </span>
         <NavLink to="/skills" onClick={() => setIsOpen(false)}>🧠 Skills</NavLink>
         <span className="separator"> | </span>
+        <NavLink to="/career" onClick={() => setIsOpen(false)}>💼 Career</NavLink>
+        <span className="separator"> | </span>
         <NavLink to="/contact" onClick={() => setIsOpen(false)}>📞 Contact</NavLink>
       </div>
     </nav>
