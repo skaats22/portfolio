@@ -22,9 +22,13 @@ form {
   cursor: pointer;
 }
 
+h1, h3 {
+  margin: 5px;
+}
+
 p {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 15px;
   margin-bottom: 0;
 }
 
