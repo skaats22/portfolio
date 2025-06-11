@@ -17,11 +17,11 @@ export default function Skills() {
           <ul>
             <li><FaJs /> JavaScript</li>
             <li><FaPython /> Python</li>
-            <li><FaReact /> React, Django Templates</li>
+            <li><FaReact /> React, Django Templates, CSS, HTML</li>
             <li><FaNodeJs /> Django, Node.js, Express.js</li>
             <li><FaDatabase /> PostgreSQL, MongoDB</li>
-            <li>Tools: Git, GitHub, Vite, RESTful APIs, OAuth</li>
-            <li>Machine Learning: Regression, Neural Nets, Decision Trees, Model Evaluation</li>
+            <li><b>Tools:</b>Git, GitHub, Vite, RESTful APIs, OAuth</li>
+            <li><b>Machine Learning:</b>Regression, Neural Nets, Decision Trees, Model Evaluation</li>
           </ul>
         </div>
 
