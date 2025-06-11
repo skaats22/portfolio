@@ -11,10 +11,10 @@ export default function Projects() {
   return (
     <>
       <h1>Projects</h1>
-      <p>
+      <h3>
         Here are some key projects showcasing my blend of sales experience and
         technical skills.
-      </p>
+      </h3>
       <div className="body">
         <div className="projectCards">
           <American />

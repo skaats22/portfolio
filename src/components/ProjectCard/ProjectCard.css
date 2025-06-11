@@ -8,6 +8,10 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
   margin: 0 auto;
+
+  display: flex;               /* make flex container */
+  flex-direction: column;      /* vertical stacking */
+  min-height: 500px;           /* or whatever fits your content */
 }
 
 .projectCard:hover {
@@ -32,35 +36,24 @@
   color: #555;
 }
 
-.screenshots {
+.imgContainer {
   display: flex;
   gap: 12px;
-  margin-top: 16px;
+  margin-top: auto;
   overflow-x: auto;
-  padding-bottom: 8px;
+  overflow-y: hidden;
+  white-space: nowrap;
+  justify-content: center;
+  scrollbar-width: thin;
+  scrollbar-color: #aaa #fff;
 }
 
-.screenshots img {
+.imgContainer img {
   width: 180px;
   height: 120px;
   object-fit: cover;
   border-radius: 6px;
   flex-shrink: 0;
   cursor: pointer;
-}
-
-.imgContainer {
-  display: "flex";
-  gap: 12;
-  margin-top: 16;
-  overflow-X: "auto";
-  overflow-y: hidden;
-  white-space: nowrap;
-  justify-content: "center";
-  scrollbar-width: thin;       /* for Firefox */
-  scrollbar-color: #aaa #fff;  /* optional styling */
-}
-
-img {
   margin: 3px;
 }
