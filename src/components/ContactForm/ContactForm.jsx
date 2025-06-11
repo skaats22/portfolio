@@ -7,18 +7,55 @@ export default function ContactForm() {
   const [status, setStatus] = useState({ message: "", type: "" });
   const [captchaVerified, setCaptchaVerified] = useState(false);
 
-  // Listen for reCAPTCHA callbacks dispatched as custom events
   useEffect(() => {
+    // Load reCAPTCHA script if not present
+    const existingScript = document.querySelector(
+      'script[src="https://www.google.com/recaptcha/api.js"]'
+    );
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.src = "https://www.google.com/recaptcha/api.js";
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+
+    // Wait for reCAPTCHA API to be available, then render
+    const interval = setInterval(() => {
+      if (window.grecaptcha && window.grecaptcha.render) {
+        if (!document.querySelector("#recaptcha-container > div")) {
+          window.grecaptcha.render("recaptcha-container", {
+            sitekey: "6LfTQl0rAAAAAEIpZsoHsSeN0tRr4oieH4U1cCNh",
+            callback: () =>
+              window.dispatchEvent(
+                new CustomEvent("captcha-verified", { detail: true })
+              ),
+            "expired-callback": () =>
+              window.dispatchEvent(
+                new CustomEvent("captcha-verified", { detail: false })
+              ),
+          });
+        }
+        clearInterval(interval);
+      }
+    }, 300);
+
     const handleCaptcha = (e) => setCaptchaVerified(e.detail);
     window.addEventListener("captcha-verified", handleCaptcha);
-    return () => window.removeEventListener("captcha-verified", handleCaptcha);
+    return () => {
+      window.removeEventListener("captcha-verified", handleCaptcha);
+      clearInterval(interval);
+    };
   }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     if (!captchaVerified) {
-      setStatus({ message: "Please verify you are not a robot.", type: "error" });
+      setStatus({
+        message: "Please verify you are not a robot.",
+        type: "error",
+      });
       return;
     }
 
@@ -37,10 +74,10 @@ export default function ContactForm() {
 
     emailjs
       .send(
-        "service_veo5xei",        // Your EmailJS service ID
-        "template_74kzeli",       // Your EmailJS template ID
+        "service_veo5xei", // Your EmailJS service ID
+        "template_74kzeli", // Your EmailJS template ID
         templateParams,
-        "670bWeAta9lFOvq2F"       // Your EmailJS public key
+        "670bWeAta9lFOvq2F" // Your EmailJS public key
       )
       .then(
         (result) => {
@@ -57,7 +94,7 @@ export default function ContactForm() {
         }
       );
   };
-console.log(status);
+  console.log(status);
   return (
     <div>
       {status.message && (
@@ -94,15 +131,14 @@ console.log(status);
         </label>
         <br />
         <div
+          id="recaptcha-container"
           className="g-recaptcha"
           data-sitekey="6LfTQl0rAAAAAEIpZsoHsSeN0tRr4oieH4U1cCNh"
           data-callback="onCaptchaSuccess"
           data-expired-callback="onCaptchaExpired"
-        ></div>
+        />
         <br />
-        <button type="submit">
-          Send
-        </button>
+        <button type="submit">Send</button>
       </form>
     </div>
   );
