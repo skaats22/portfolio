@@ -10,7 +10,7 @@
   gap: 5px;
   font-size: 24px;
   background-color: white;
-  z-index: 1000;
+  z-index: 1100;
   padding: 0 50px;          /* add left & right padding, leave space for hamburger */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
@@ -66,6 +66,7 @@
 
 /* Bars inside hamburger */
 .bar {
+  width: 100%;
   height: 3px;
   background-color: #333;
   border-radius: 2px;
@@ -91,6 +92,8 @@
   .hamburger {
     display: flex;
   }
+
+  
 
   .navLinks {
     display: none;
