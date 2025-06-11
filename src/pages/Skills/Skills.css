@@ -15,7 +15,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: space-between;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .skillsColumn,
