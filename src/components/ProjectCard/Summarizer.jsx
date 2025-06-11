@@ -3,7 +3,7 @@ import soon from "../../assets/soonimage.jpg";
 import "./ProjectCard.css";
 
 const summarizerProject = {
-  name: "Sales Meeting Summarizer",
+  name: "Sales Meeting Summarizer (coming soon...)",
   link: "https://github.com/skaats22/summarizer",
   description: `A full-stack app that automates summarizing sales meeting notes and generates professional follow-up emails using large language models (LLMs).
 

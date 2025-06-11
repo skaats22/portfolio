@@ -18,8 +18,8 @@ export default function Projects() {
       <div className="body">
         <div className="projectCards">
           <American />
-          <Summarizer />
           <DigiWorld />
+          <Summarizer />
           <Poptaco />
         </div>
       </div>
