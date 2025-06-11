@@ -1,13 +1,26 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import "./ContactForm.css";
 
 export default function ContactForm() {
   const form = useRef();
   const [status, setStatus] = useState({ message: "", type: "" });
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+
+  // Listen for reCAPTCHA callbacks dispatched as custom events
+  useEffect(() => {
+    const handleCaptcha = (e) => setCaptchaVerified(e.detail);
+    window.addEventListener("captcha-verified", handleCaptcha);
+    return () => window.removeEventListener("captcha-verified", handleCaptcha);
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    if (!captchaVerified) {
+      setStatus({ message: "Please verify you are not a robot.", type: "error" });
+      return;
+    }
 
     const formData = new FormData(e.target);
     let name = formData.get("name") || "";
@@ -24,19 +37,19 @@ export default function ContactForm() {
 
     emailjs
       .send(
-        "service_veo5xei",
-        "template_74kzeli",
+        "service_veo5xei",        // Your EmailJS service ID
+        "template_74kzeli",       // Your EmailJS template ID
         templateParams,
-        "670bWeAta9lFOvq2F"
+        "670bWeAta9lFOvq2F"       // Your EmailJS public key
       )
       .then(
         (result) => {
-          console.log(result.text);
           setStatus({ message: "Message sent successfully!", type: "success" });
           form.current.reset();
+          setCaptchaVerified(false);
+          if (window.grecaptcha) window.grecaptcha.reset();
         },
         (error) => {
-          console.log(error.text);
           setStatus({
             message: "Failed to send message. Try again later.",
             type: "error",
@@ -44,7 +57,7 @@ export default function ContactForm() {
         }
       );
   };
-
+console.log(status);
   return (
     <div>
       {status.message && (
@@ -65,23 +78,31 @@ export default function ContactForm() {
         </p>
       )}
       <form ref={form} onSubmit={sendEmail}>
-        <div className="row">
-          <label>
-            Name:
-            <input type="text" name="name" required />
-          </label>
-          <label>
-            Email:
-            <input type="email" name="email" required />
-          </label>
-        </div>
-
+        <label>
+          Name:
+          <input type="text" name="name" required />
+        </label>
+        <br />
+        <label>
+          Email:
+          <input type="email" name="email" required />
+        </label>
+        <br />
         <label>
           Message:
           <textarea name="message" required />
         </label>
-
-        <button type="submit">Send</button>
+        <br />
+        <div
+          className="g-recaptcha"
+          data-sitekey="6LfTQl0rAAAAAEIpZsoHsSeN0tRr4oieH4U1cCNh"
+          data-callback="onCaptchaSuccess"
+          data-expired-callback="onCaptchaExpired"
+        ></div>
+        <br />
+        <button type="submit">
+          Send
+        </button>
       </form>
     </div>
   );
