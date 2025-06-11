@@ -14,7 +14,7 @@ export default function Timeline() {
     <VerticalTimeline>
       <VerticalTimelineElement
         className="vertical-timeline-element--education"
-        date="2012 – 2016"
+        date="May 2016"
         contentStyle={{ background: "#fce4ec", color: "#333" }}
         contentArrowStyle={{ borderRight: "7px solid #fce4ec" }}
       >
@@ -28,7 +28,7 @@ export default function Timeline() {
 
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        date="2016 – 2022"
+        date="Aug 2016 – Mar 2022"
         contentStyle={{ background: "#e3f2fd", color: "#333" }}
         contentArrowStyle={{ borderRight: "7px solid #e3f2fd" }}
       >
@@ -42,21 +42,7 @@ export default function Timeline() {
 
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        date="2022 – 2023"
-        contentStyle={{ background: "#e3f2fd", color: "#333" }}
-        contentArrowStyle={{ borderRight: "7px solid #e3f2fd" }}
-      >
-        <h3>Manager, Business Development</h3>
-        <h4 className="timeline-subtitle">Oxford Economics</h4>
-        <p>
-          Sold economic advisory services into finance teams; translated
-          technical insights into business outcomes.
-        </p>
-      </VerticalTimelineElement>
-
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        date="2023"
+        date="Apr 2022 - Jan 2023"
         contentStyle={{ background: "#e3f2fd", color: "#333" }}
         contentArrowStyle={{ borderRight: "7px solid #e3f2fd" }}
       >
@@ -65,6 +51,20 @@ export default function Timeline() {
         <p>
           Collaborated with CIOs at $1B+ companies to align on strategic tech
           priorities. Achieved 110% of quota.
+        </p>
+      </VerticalTimelineElement>
+
+      <VerticalTimelineElement
+        className="vertical-timeline-element--work"
+        date="Jul 2023 – Nov 2024"
+        contentStyle={{ background: "#e3f2fd", color: "#333" }}
+        contentArrowStyle={{ borderRight: "7px solid #e3f2fd" }}
+      >
+        <h3>Manager, Business Development</h3>
+        <h4 className="timeline-subtitle">Oxford Economics</h4>
+        <p>
+          Sold economic advisory services into finance teams; translated
+          technical insights into business outcomes.
         </p>
       </VerticalTimelineElement>
 
@@ -84,7 +84,7 @@ export default function Timeline() {
 
       <VerticalTimelineElement
         className="vertical-timeline-element--education"
-        date="2025"
+        date="Mar 2025"
         contentStyle={{ background: "#fce4ec", color: "#333" }}
         contentArrowStyle={{ borderRight: "7px solid #fce4ec" }}
       >
