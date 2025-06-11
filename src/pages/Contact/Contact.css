@@ -1,9 +1,9 @@
 form {
-  max-width: 400px;
-  margin: 0 auto; /* center form horizontally */
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2px; /* spacing between fields */
 }
 
 .logo {
@@ -75,3 +75,17 @@ button {
 button:hover {
   background-color: #d96fd9;
 }
+
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .contactContainer {
+    padding: 10px;
+  }
+}
+

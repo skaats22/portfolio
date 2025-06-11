@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import "./ContactForm.css";
 
 export default function ContactForm() {
   const form = useRef();
@@ -56,28 +57,30 @@ export default function ContactForm() {
             width: "75%",
             margin: "0 auto 20px auto",
             borderRadius: "16px",
-            backgroundColor: status.type === "success" ? "lightgreen" : "rgb(248, 168, 168)",
+            backgroundColor:
+              status.type === "success" ? "lightgreen" : "rgb(248, 168, 168)",
           }}
         >
           {status.message}
         </p>
       )}
       <form ref={form} onSubmit={sendEmail}>
-        <label>
-          Name:
-          <input type="text" name="name" required />
-        </label>
-        <br />
-        <label>
-          Email:
-          <input type="email" name="email" required />
-        </label>
-        <br />
+        <div className="row">
+          <label>
+            Name:
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email:
+            <input type="email" name="email" required />
+          </label>
+        </div>
+
         <label>
           Message:
           <textarea name="message" required />
         </label>
-        <br />
+
         <button type="submit">Send</button>
       </form>
     </div>

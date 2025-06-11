@@ -37,7 +37,6 @@ p {
 
 @media (max-width: 480px) {
   .projectCards {
-    padding: 0 10px; /* even smaller padding for tiny phones */
     width: 95%;
   }
 }
