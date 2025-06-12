@@ -94,7 +94,7 @@ export default function ContactForm() {
         }
       );
   };
-  console.log(status);
+
   return (
     <div>
       {status.message && (

@@ -7,6 +7,7 @@ import Skills from "../Skills/Skills";
 import Contact from "../Contact/Contact";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
+import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <div className="appContainer">
         <NavBar />
         <div className="pageContent">
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<Projects />} />

@@ -13,6 +13,10 @@ h1 {
   text-align: center;
 }
 
+h3 {
+  padding-bottom: 10px;
+}
+
 p {
   font-size: 1.1rem;
   color: #666;
