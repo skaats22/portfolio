@@ -26,7 +26,6 @@ Optimized for mobile and performance, the project gave me experience with authen
     "https://imgur.com/V111mas.jpg",
     "https://imgur.com/WEq7Rg3.jpg",
     "https://imgur.com/Oof4R5D.jpg",
-    "https://imgur.com/xEmkzDu.jpg",
   ],
 };
 
