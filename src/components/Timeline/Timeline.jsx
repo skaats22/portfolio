@@ -8,6 +8,8 @@ import "./Timeline.css";
 import uscLogo from "../../assets/usc-logo.png";
 import galogo from "../../assets/galogo.webp";
 import stanfordlogo from "../../assets/stanfordlogo.jpg";
+import gcpLogo from "../../assets/gcpLogo.png";
+import carpayLogo from "../../assets/carpayLogo.png";
 
 export default function Timeline() {
   return (
@@ -96,6 +98,38 @@ export default function Timeline() {
         <p>
           Completed 100-hour ML training including neural networks, tree
           methods, and model evaluation.
+        </p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        className="vertical-timeline-element--education"
+        date="Jul 2025"
+        contentStyle={{ background: "#fce4ec", color: "#333" }}
+        contentArrowStyle={{ borderRight: "7px solid #fce4ec" }}
+      >
+        <h3>Cloud Digital Leader</h3>
+        <h4 className="timeline-subtitle">
+          Google Cloud Digital Leader
+          <img src={gcpLogo} alt="Google Cloud" className="timeline-logo" />
+        </h4>
+        <p>
+          Learned core GCP services, IAM, and deployment strategies. Certified
+          in cloud foundations and operations.
+        </p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        className="vertical-timeline-element--work"
+        date="Jul 2025 – Present"
+        contentStyle={{ background: "#e3f2fd", color: "#333" }}
+        contentArrowStyle={{ borderRight: "7px solid #e3f2fd" }}
+      >
+        <h3>AI Voice Engineer (Contract)</h3>
+        <h4 className="timeline-subtitle">
+          Carpay
+          <img src={carpayLogo} alt="Carpay Logo" className="timeline-logo" />
+        </h4>
+        <p>
+          Built AI voice agent using Telnyx Voice API to automate borrower
+          outreach. Designed payment flow logic and integrated webhooks.
         </p>
       </VerticalTimelineElement>
     </VerticalTimeline>
