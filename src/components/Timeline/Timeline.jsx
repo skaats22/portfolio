@@ -106,7 +106,7 @@ export default function Timeline() {
         contentStyle={{ background: "#fce4ec", color: "#333" }}
         contentArrowStyle={{ borderRight: "7px solid #fce4ec" }}
       >
-        <h3>Cloud Digital Leader</h3>
+        <h3>Google Cloud Certified</h3>
         <h4 className="timeline-subtitle">
           Google Cloud Digital Leader
           <img src={gcpLogo} alt="Google Cloud" className="timeline-logo" />
