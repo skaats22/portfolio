@@ -3,6 +3,7 @@ import "./Skills.css";
 import uscLogo from "../../assets/usc-logo.png";
 import galogo from "../../assets/galogo.webp";
 import stanfordlogo from "../../assets/stanfordlogo.jpg";
+import gcpLogo from "../../assets/gcpLogo.png"
 import Timeline from "../../components/Timeline/Timeline";
 import { FaPython, FaReact, FaDatabase, FaNodeJs, FaJs } from "react-icons/fa";
 
@@ -20,7 +21,7 @@ export default function Skills() {
             <li><FaReact /> React, Django Templates, CSS, HTML</li>
             <li><FaNodeJs /> Django, Node.js, Express.js</li>
             <li><FaDatabase /> PostgreSQL, MongoDB</li>
-            <li><b>Tools:</b>Git, GitHub, Vite, RESTful APIs, OAuth</li>
+            <li><b>Tools:</b>Git, GitHub, RESTful APIs, OAuth, Telnyx API, Webhooks</li>
             <li><b>Machine Learning:</b>Regression, Neural Nets, Decision Trees, Model Evaluation</li>
           </ul>
         </div>
@@ -30,15 +31,19 @@ export default function Skills() {
           <ul>
             <li>
               <strong>B.A. Neuroscience,</strong>USC
-              <img src={uscLogo} alt="USC" className="edu-logo" />
+              <img src={uscLogo} alt="USC Logo" className="edu-logo" />
             </li>
             <li>
               <strong>Software Engineering Immersive,</strong>General Assembly
-              <img src={galogo} alt="GA" className="edu-logo" />
+              <img src={galogo} alt="GA Logo" className="edu-logo" />
+            </li>
+            <li>
+              <strong>Google Cloud Digital Leader,</strong>Google Cloud Platform
+              <img src={gcpLogo} alt="GCP Logo" className="edu-logo" />
             </li>
             <li>
               <strong>Machine Learning Specialization,</strong>Stanford Online
-              <img src={stanfordlogo} alt="Stanford" className="edu-logo" />
+              <img src={stanfordlogo} alt="Stanford Logo" className="edu-logo" />
             </li>
           </ul>
         </div>
