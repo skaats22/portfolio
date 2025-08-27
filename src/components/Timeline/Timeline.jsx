@@ -122,7 +122,7 @@ export default function Timeline() {
         contentStyle={{ background: "#e3f2fd", color: "#333" }}
         contentArrowStyle={{ borderRight: "7px solid #e3f2fd" }}
       >
-        <h3>AI Voice Engineer (Contract)</h3>
+        <h3>AI Voice Agent Consultant</h3>
         <h4 className="timeline-subtitle">
           Carpay
           <img src={carpayLogo} alt="Carpay Logo" className="timeline-logo" />
