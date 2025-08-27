@@ -6,7 +6,7 @@ const digiworldProject = {
   link: "https://github.com/skaats22/digiworld",
   description: `DigiWorld is a web app for Digimon enthusiasts to collect, trade, and manage their Digimon collection. The app features a user-friendly interface to browse Digimon, track owned creatures, and engage with other collectors.
 
-Built with React for a fast and responsive frontend, Node.js and Express for the backend API, MongoDB with Mongoose for data persistence, and JWT for user authentication.`,
+  Built with Django and Python using Django’s template engine for the frontend. PostgreSQL powers the database, while Django’s ORM manages models and relationships. The UI is styled with custom CSS, and Django’s authentication system secures user accounts.`,
   technologies: ["React", "Node.js", "Express", "MongoDB", "Mongoose", "JWT"],
   role: "Designed and developed the full-stack app with features focused on seamless collection management, authentication, and real-time user interaction.",
   screenshots: [
