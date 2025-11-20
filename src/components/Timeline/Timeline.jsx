@@ -122,14 +122,19 @@ export default function Timeline() {
         contentStyle={{ background: "#e3f2fd", color: "#333" }}
         contentArrowStyle={{ borderRight: "7px solid #e3f2fd" }}
       >
-        <h3>AI Voice Agent Consultant</h3>
+        <h3>Technical Product Manager</h3>
         <h4 className="timeline-subtitle">
           Carpay
           <img src={carpayLogo} alt="Carpay Logo" className="timeline-logo" />
         </h4>
         <p>
-          Built AI voice agent using Telnyx Voice API to automate borrower
-          outreach. Designed payment flow logic and integrated webhooks.
+          1. Built and deployed an outbound AI voice agent using the Telnyx
+          Voice API to automate borrower outreach, payment collection, and call
+          logging.
+          <br />
+          2. Led the end-to-end launch of Upcharge, a new payment-processing
+          add-on helping businesses eliminate credit-card fees and increase
+          upfront revenue.
         </p>
       </VerticalTimelineElement>
     </VerticalTimeline>
