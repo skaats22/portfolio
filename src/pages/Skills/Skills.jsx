@@ -16,13 +16,14 @@ export default function Skills() {
         <div className="skillsColumn">
           <h3>Technical Skills</h3>
           <ul>
-            <li><FaJs /> JavaScript</li>
+            <li><FaJs /> JavaScript, TypeScript</li>
             <li><FaPython /> Python</li>
-            <li><FaReact /> React, Django Templates, CSS, HTML</li>
+            <li><FaReact /> React, Django Templates, Tailwind CSS, HTML</li>
             <li><FaNodeJs /> Django, Node.js, Express.js</li>
             <li><FaDatabase /> PostgreSQL, MongoDB</li>
-            <li><b>Tools:</b>Git, GitHub, RESTful APIs, OAuth, Telnyx API, Webhooks</li>
+            <li><b>Tools:</b>Git, GitHub, RESTful APIs, OAuth, Telnyx API, Webhooks, Vercel</li>
             <li><b>Machine Learning:</b>Regression, Neural Nets, Decision Trees, Model Evaluation</li>
+            <li><b>Product & System:</b>Payment flows, AI outbound automation, event-driven apps</li>
           </ul>
         </div>
 
