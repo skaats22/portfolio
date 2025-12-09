@@ -6,10 +6,14 @@ import "react-vertical-timeline-component/style.min.css";
 import "./Timeline.css";
 
 import uscLogo from "../../assets/usc-logo.png";
+import epsonLogo from "../../assets/epsonLogo.png";
+import gartnerLogo from "../../assets/gartnerLogo.png";
+import oeLogo from "../../assets/oeLogo.jpeg";
 import galogo from "../../assets/galogo.webp";
 import stanfordlogo from "../../assets/stanfordlogo.jpg";
 import gcpLogo from "../../assets/gcpLogo.png";
-import carpayLogo from "../../assets/carpayLogo.png";
+import carpayLogo from "../../assets/carpayLogo.webp";
+import upchargeLogo from "../../assets/upchargeLogo.png";
 
 export default function Timeline() {
   return (
@@ -35,7 +39,10 @@ export default function Timeline() {
         contentArrowStyle={{ borderRight: "7px solid #e3f2fd" }}
       >
         <h3>Enterprise Account Manager</h3>
-        <h4 className="timeline-subtitle">Epson America</h4>
+        <h4 className="timeline-subtitle">
+          Epson America{" "}
+          <img src={epsonLogo} alt="Epson Logo" className="timeline-logo" />
+        </h4>
         <p>
           Managed $30M of business through CDW and other large resellers. Led
           ecommerce initiatives and incentive programs.
@@ -49,7 +56,10 @@ export default function Timeline() {
         contentArrowStyle={{ borderRight: "7px solid #e3f2fd" }}
       >
         <h3>Enterprise Account Executive</h3>
-        <h4 className="timeline-subtitle">Gartner</h4>
+        <h4 className="timeline-subtitle">
+          Gartner{" "}
+          <img src={gartnerLogo} alt="Gartner Logo" className="timeline-logo" />
+        </h4>
         <p>
           Collaborated with CIOs at $1B+ companies to align on strategic tech
           priorities. Achieved 110% of quota.
@@ -63,7 +73,14 @@ export default function Timeline() {
         contentArrowStyle={{ borderRight: "7px solid #e3f2fd" }}
       >
         <h3>Manager, Business Development</h3>
-        <h4 className="timeline-subtitle">Oxford Economics</h4>
+        <h4 className="timeline-subtitle">
+          Oxford Economics{" "}
+          <img
+            src={oeLogo}
+            alt="Oxford Economics Logo"
+            className="timeline-logo"
+          />
+        </h4>
         <p>
           Sold economic advisory services into finance teams; translated
           technical insights into business outcomes.
@@ -135,6 +152,44 @@ export default function Timeline() {
           2. Led the end-to-end launch of Upcharge, a new payment-processing
           add-on helping businesses eliminate credit-card fees and increase
           upfront revenue.
+        </p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        className="vertical-timeline-element--work"
+        date="Aug 2025 – Dec 2025"
+        contentStyle={{ background: "#e3f2fd", color: "#333" }}
+        contentArrowStyle={{ borderRight: "7px solid #e3f2fd" }}
+      >
+        <h3>Software Engineer</h3>
+        <h4 className="timeline-subtitle">PupilPickup</h4>
+        <p>
+          Contributed as a software engineer on a React + TypeScript + Tailwind
+          platform helping parents in Nepal coordinate safe, community-driven
+          school pickups and drop-offs.
+        </p>
+      </VerticalTimelineElement>
+
+      <VerticalTimelineElement
+        className="vertical-timeline-element--work"
+        date="Sep 2025 – Present"
+        contentStyle={{ background: "#e3f2fd", color: "#333" }}
+        contentArrowStyle={{ borderRight: "7px solid #e3f2fd" }}
+      >
+        <h3>Technical Product & GTM Lead</h3>
+        <h4 className="timeline-subtitle">
+          Upcharge{" "}
+          <img
+            src={upchargeLogo}
+            alt="Upcharge Logo"
+            className="timeline-logo"
+          />
+        </h4>
+        <p>
+          Leading product and GTM for Carpay’s new upfront payments product.
+          Overseeing brand, website direction, pricing, onboarding flows, and
+          merchant acquisition. Built the Upcharge Savings Calculator and the
+          activation flow, and manage the founding SDR to drive early pipeline
+          and adoption.
         </p>
       </VerticalTimelineElement>
     </VerticalTimeline>
