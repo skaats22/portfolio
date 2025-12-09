@@ -15,29 +15,29 @@ export default function HomePage() {
           <img src={profPic} alt="profile picture" />
           <div className="bio">
             <div>
-              I’ve always been passionate about technology and how it can solve
-              real business problems. With over 8 years of experience in
-              enterprise sales and business development—managing $30M in annual
-              revenue and working closely with Fortune 1000 CIOs—I bring a
-              unique perspective that combines deep client understanding with
-              technical fluency.
+              I blend product, engineering, and GTM experience to turn ideas
+              into ship-ready solutions. Before moving into software
+              development, I spent 8+ years in enterprise sales and business
+              development managing $30M in annual revenue as well as partnering with
+              Fortune 1000 technology leaders. That background gives me a strong
+              understanding of customer pain points and how technical products
+              drive measurable outcomes.
               <br />
               <br />
             </div>
             <div>
-              To build on this passion and bridge the gap between business and
-              technology, I completed a 12-week full-time software engineering
-              bootcamp. Whether as a software engineer or in account management
-              or client success roles supporting technical products, I’m driven
-              to translate complex technical concepts into impactful solutions
-              that align with strategic priorities.
+              To deepen my technical foundation, I completed a full-time
+              software engineering immersive and expanded into AI, cloud, and
+              full-stack development. Since then, I’ve built production systems
+              ranging from React and Django applications to autonomous voice
+              agents and payment workflows.
               <br />
               <br />
             </div>
             <div>
-              My hands-on experience with React, Django, and machine learning,
-              paired with my client-focused mindset, equips me to deliver better
-              outcomes faster.
+              Today, I focus on using technology to streamline operations,
+              improve user experience, and support teams with tools that
+              actually move the business forward.
             </div>
           </div>
         </div>
